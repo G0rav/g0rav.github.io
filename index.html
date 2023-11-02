@@ -1,129 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - AI Engineer Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaurav Jain - AI Engineer Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
 
-        header {
-            text-align: center;
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
 
-        h1 {
-            font-size: 2.5rem;
-            margin: 0;
-        }
+    .column {
+      display: flex;
+      align-items: center;
+    }
 
-        img {
-            width: 150px; /* Adjust the width to your preference */
-            height: 150px; /* Adjust the height to your preference */
-            border-radius: 50%;
-            margin-top: 10px;
-        }
+    img {
+      width: 150px;
+      /* Adjust the width to your preference */
+      height: 150px;
+      /* Adjust the height to your preference */
+      border-radius: 50%;
+    }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-        }
+    .text-column {
+      margin-left: 40px;
+      /* Add margin to separate the columns */
+    }
 
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-        }
+    p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-align: justify
+    }
 
-        section {
-            padding: 20px;
-        }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
 
-        .project {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
 
-        h2 {
-            font-size: 1.5rem;
-        }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
 
-        a {
-            text-decoration: none;
-            color: #007BFF;
-        }
+    section {
+      padding: 20px;
+    }
 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #333;
-            color: #fff;
-        }
-    </style>
+    .project {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .work-entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* margin-bottom: 10px; */
+    }
+
+    .date {
+      text-align: right;
+      flex-grow: 1;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+
+    li {
+      margin-bottom: 10px;
+
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <img src="https://storage.googleapis.com/turing_developers/avatar/1695498969671_Passport%20size.jpg" alt="Gaurav's Picture">
-        <h1>Your Name</h1>
-        <p>Experienced AI Engineer</p>
-    </header>
+  <header>
+    <div class="column">
+      <img src="https://storage.googleapis.com/turing_developers/avatar/1695498969671_Passport%20size.jpg"
+        alt="Gaurav's Picture">
+    </div>
+    <div class="text-column">
+      <h1>Gaurav Jain</h1>
+      <br>
+      <p>Experienced ML Engineer with a Springer-published paper and business scaling expertise. having a goal to
+        contribute in Humanity and Mankind.</p>
+    </div>
+  </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Write a brief introduction about yourself, your experience, and your passion for AI and machine learning.</p>
-    </section>
+  <nav>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <!-- List your AI and machine learning projects with descriptions, links, and any other relevant information. -->
-        <div class="project">
-            <h3>Project 1: Project Name</h3>
-            <p>Description of the project goes here.</p>
-            <a href="#">View Project</a>
-        </div>
-        <div class="project">
-            <h3>Project 2: Project Name</h3>
-            <p>Description of the project goes here.</p>
-            <a href="#">View Project</a>
-        </div>
-        <!-- Add more project entries as needed -->
-    </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am an experienced ML Engineer with a profound goal to harness the power of AI for the betterment of humanity.
+      My career path involves advancing machine learning and computer vision, spearheading pioneering research, and
+      actively taking on leadership roles.
+    </p>
+    <p>
+      I aim to make a positive societal impact through groundbreaking projects and
+      entrepreneurial ventures. My comprehensive skill set includes machine learning, computer vision, AI, and deep
+      learning, as well as proficiency in Python and data engineering. I excel in problem-solving and innovative
+      solutions, and my research background reflects my commitment to staying at the forefront of technology. </p>
+    <p>My work
+      style is methodical, detail-oriented, and collaborative, with a strong commitment to producing optimized,
+      efficient, and accurate solutions. I am driven by a fervor for leveraging cutting-edge technology to overcome
+      complex challenges, and I excel in leadership and mentorship, supporting the growth and development of those
+      around me.</p>
+  </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <!-- Add your contact information, such as email, LinkedIn, and GitHub links. -->
-        <p>Email: your@email.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/yourprofile">Your LinkedIn Profile</a></p>
-        <p>GitHub: <a href="https://github.com/yourusername">Your GitHub Profile</a></p>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <!-- List your AI and machine learning projects with descriptions, links, and any other relevant information. -->
+    <div class="project">
+      <h3>Project 1: Project Name</h3>
+      <p>Description of the project goes here.</p>
+      <a href="#">View Project</a>
+    </div>
+    <div class="project">
+      <h3>Project 2: Project Name</h3>
+      <p>Description of the project goes here.</p>
+      <a href="#">View Project</a>
+    </div>
+    <!-- Add more project entries as needed -->
+  </section>
 
-    <footer>
-        <p>&copy; 2023 Your Name</p>
-    </footer>
+  <!-- Work History Section -->
+  <section>
+    <h2>Experience</h2>
+    <div class="project">
+
+      <div class="work-entry">
+        <h3>Machine Learning Engineer III</h3>
+        <p class="date">January 2022 - October 2023</p>
+      </div>
+
+      <div class="work-entry" style="margin-top: -28px;">
+        <h4>Aftershoot</h4>
+        <p class="date">1 yrs 9 mos</p>
+      </div>
+      <p>Aftershoot is a software startup specializing in computer vision-powered solutions for photographers.</p>
+      <ul>
+        <li>
+          <p>
+            Played a key role as the first full-time employee in scaling the business to over 2Mn ARR and growing the
+            ML team to 10.
+          </p>
+        </li>
+        <li>
+          <p>Leading machine learning team & building computer vision solutions based on object detection,
+            classification, statistics
+            leading algorithms, segmentation and object recognition.
+          </p>
+        </li>
+        <li>
+          <p>Developed a face detection algorithm achieving >99% accuracy, even on images with a resolution of 6k.
+          </p>
+        </li>
+        <li>
+          <p>Trained new ML models with improved accuracy and faster inference times, leading to increased customer
+            satisfaction
+            and improved product performance.</p>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="project">
+
+      <div class="work-entry">
+        <h3>Intern</h3>
+        <p class="date">June 2021 - January 2022</p>
+      </div>
+
+      <div class="work-entry" style="margin-top: -28px;">
+        <h4>Siemens Industry Software</h4>
+        <p class="date">8 mos</p>
+      </div>
+      <ul>
+        <li>
+          <p>
+            Handled the development of build infrastructure and streamlined the CI/CD pipeline to ensure faster and more
+            efficient product delivery.
+          </p>
+        </li>
+        <li>
+          <p>Deployed a machine learning model to accurately predict ticket build time, lead to increased developer
+            efficiency.
+          </p>
+        </li>
+        <li>
+          <p>Designed and implemented an internal chatbot to instantly resolve queries from developers, improving
+            productivity and collaboration within the team.</p>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div class="project">
+
+      <div class="work-entry">
+        <h3>Graduate Apprentice</h3>
+        <p class="date">October 2018 - October 2019</p>
+      </div>
+
+      <div class="work-entry" style="margin-top: -28px;">
+        <h4>Bosch</h4>
+        <p class="date">1 yrs</p>
+      </div>
+      <ul>
+        <li>
+          <p>
+            Oversaw machine, parts, and manpower planning, leading to significant improvements in efficiency and
+            productivity.
+          </p>
+        </li>
+        <li>
+          <p>Automated MIS reporting in Excel, reducing manual effort by more than 1 hour and improving accuracy.
+          </p>
+        </li>
+        <li>
+          <p>Redesigned the coolant return tank of a machine, eliminating waste of waiting and processing on the
+            production line, and achieving an annual cost savings of Rs 100k.</p>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </section>
+
+  <!-- Education Section -->
+  <section>
+    <h2>Education</h2>
+    <p>Add your education details here.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section>
+    <h2>Skills</h2>
+    <p>Add your skills and expertise here.</p>
+  </section>
+
+  <!-- Publications Section -->
+  <section>
+    <h2>Publications</h2>
+    <p>Add your publications and research work here.</p>
+  </section>
+
+  <!-- Certifications & Awards Section -->
+  <section>
+    <h2>Certifications & Awards</h2>
+    <p>Add your certifications and awards here.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <!-- Add your contact information, such as email, LinkedIn, and GitHub links. -->
+    <p>Email: g.jain86078@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/gaurav2022/">linkedin.com/in/gaurav2022</a></p>
+    <p>GitHub: <a href="https://github.com/G0rav/">github.com/G0rav</a></p>
+  </section>
+
+  <footer>
+    <!-- <p>&copy; 2023 Gaurav </p> -->
+  </footer>
 </body>
+
 </html>
