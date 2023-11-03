@@ -64,7 +64,7 @@
 
     nav ul li a {
       text-decoration: none;
-      color: #333;
+      color: #848484;
     }
 
     section {
@@ -104,6 +104,41 @@
 
     }
 
+    /* Add this CSS to your existing styles */
+    .skill-chips {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .skill-chip {
+      background-color: #205186;
+      color: #fff;
+      border-radius: 8px;
+      padding: 5px 15px;
+      margin: 5px;
+      font-size: 0.9rem;
+    }
+
+    /* Add this CSS to your existing styles */
+    #back-to-top {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1;
+      background-color: #545454;
+      color: #ffffff;
+      border: none;
+      border-radius: 10%;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    #back-to-top:hover {
+      background-color: #0056b3;
+    }
+
+
     footer {
       text-align: center;
       padding: 10px 0;
@@ -116,13 +151,12 @@
 <body>
   <header>
     <div class="column">
-      <img src="https://storage.googleapis.com/turing_developers/avatar/1695498969671_Passport%20size.jpg"
-        alt="Gaurav's Picture">
+      <img src="https://avatars.githubusercontent.com/u/62126889?v=4" alt="Gaurav's Picture">
     </div>
     <div class="text-column">
       <h1>Gaurav Jain</h1>
       <br>
-      <p>Experienced ML Engineer with a Springer-published paper and business scaling expertise. having a goal to
+      <p>Experienced ML Engineer with a Springer-published paper and business scaling expertise. <br>Having goal to
         contribute in Humanity and Mankind.</p>
     </div>
   </header>
@@ -131,8 +165,16 @@
   <nav>
     <ul>
       <li><a href="#about">About Me</a></li>
+      <li><a href="#publication">Publication</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications & Awards</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="https://drive.google.com/file/d/1roWI3-jXPiCSoRQEcbXgrVyN64ewivJv/view?usp=sharing"
+          target="_blank">Download
+          Resume</a></li>
     </ul>
   </nav>
 
@@ -154,24 +196,27 @@
       around me.</p>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <!-- List your AI and machine learning projects with descriptions, links, and any other relevant information. -->
+  <!-- Publications Section -->
+  <section id="publication">
+    <h2>Publication</h2>
     <div class="project">
-      <h3>Project 1: Project Name</h3>
-      <p>Description of the project goes here.</p>
-      <a href="#">View Project</a>
+      <div class="work-entry">
+
+        <h4>Flynet – Neural Network Model for Automatic Building Detection from Satellite Images. <i>J Indian Soc Remote
+            Sens
+            51</i>,
+          1441–1456 (2023). Spinger.</h4>
+      </div>
+
+      <div class="work-entry" style="margin-top: -6px;">
+        <a href="https://link.springer.com/article/10.1007/s12524-023-01703-2" target="_blank">Journal Link</a>
+      </div>
     </div>
-    <div class="project">
-      <h3>Project 2: Project Name</h3>
-      <p>Description of the project goes here.</p>
-      <a href="#">View Project</a>
-    </div>
-    <!-- Add more project entries as needed -->
+
   </section>
 
   <!-- Work History Section -->
-  <section>
+  <section id="experience">
     <h2>Experience</h2>
     <div class="project">
 
@@ -243,6 +288,7 @@
 
     </div>
 
+
     <div class="project">
 
       <div class="work-entry">
@@ -277,40 +323,195 @@
   </section>
 
   <!-- Education Section -->
-  <section>
+  <section id="education">
     <h2>Education</h2>
-    <p>Add your education details here.</p>
+    <div class="project">
+
+      <div class="work-entry">
+        <h3>M. Tech — Artificial Intelligence</h3>
+        <p class="date">Sept. 2020 – May 2022</p>
+      </div>
+
+      <div class="work-entry" style="margin-top: -28px;">
+        <h4>National Institute of Technology (NIT), Bhopal</h4>
+        <p class="date">2 yrs</p>
+      </div>
+
+    </div>
+
+    <div class="project">
+
+      <div class="work-entry">
+        <h3>B. Tech — Mechanical Engineering</h3>
+        <p class="date">Aug 2014 – May 2018</p>
+      </div>
+
+      <div class="work-entry" style="margin-top: -28px;">
+        <h4>University Institute of Engg. and Technology, Kurukshetra</h4>
+        <p class="date">4 yrs</p>
+      </div>
+
+    </div>
   </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <!-- List your AI and machine learning projects with descriptions, links, and any other relevant information. -->
+    <div class="project">
+      <h3>Project 1: Project Name</h3>
+      <p>Description of the project goes here.</p>
+      <a href="#">View Project</a>
+    </div>
+    <div class="project">
+      <h3>Project 2: Project Name</h3>
+      <p>Description of the project goes here.</p>
+      <a href="#">View Project</a>
+    </div>
+    <!-- Add more project entries as needed -->
+  </section>
+
 
   <!-- Skills Section -->
-  <section>
+  <section id="skills">
     <h2>Skills</h2>
-    <p>Add your skills and expertise here.</p>
+
+    <div class="project">
+
+      <div class="skill-chips">
+        <span class="skill-chip">Machine Learning</span>
+        <span class="skill-chip">Deep Learning</span>
+        <span class="skill-chip">Natural Language Processing</span>
+        <span class="skill-chip">Data Analysis</span>
+        <span class="skill-chip">Python</span>
+        <span class="skill-chip">TensorFlow</span>
+        <span class="skill-chip">PyTorch</span>
+      </div>
+    </div>
+
+
   </section>
 
-  <!-- Publications Section -->
-  <section>
-    <h2>Publications</h2>
-    <p>Add your publications and research work here.</p>
-  </section>
 
   <!-- Certifications & Awards Section -->
-  <section>
+  <section id="certifications">
     <h2>Certifications & Awards</h2>
-    <p>Add your certifications and awards here.</p>
+    <div class="project">
+
+      <div class="work-entry">
+        <h4>Data Science Math Skills</h4>
+        <p class="date">2020</p>
+      </div>
+
+      <div class="work-entry" style="margin-top: -36px;">
+        <h5>Coursera</h5>
+        <p class="date"><a
+            href="https://www.coursera.org/account/accomplishments/verify/9HRBEAEE8SLW?utm_campaign=copybutton_certificate&utm_medium=certificate&utm_source=link"
+            target="_blank">Show
+            Credential</a> </p>
+      </div>
+
+      <div class="work-entry">
+        <h4>Machine Learning Scientist</h4>
+        <p class="date">2020</p>
+      </div>
+
+      <div class="work-entry" style="margin-top: -36px;">
+        <h5>Datacamp</h5>
+        <p class="date"><a
+            href="https://www.datacamp.com/statement-of-accomplishment/track/1d5e50768e76b410843b8a1cc41ab7aa6e8b2caa"
+            target="_blank">Show
+            Credential</a> </p>
+      </div>
+
+
+      <div class="work-entry">
+        <h4>Data Scientist</h4>
+        <p class="date">2020</p>
+      </div>
+
+      <div class="work-entry" style="margin-top: -36px;">
+        <h5>Datacamp</h5>
+        <p class="date"><a
+            href="https://www.datacamp.com/statement-of-accomplishment/track/4cf2ee95f34d52e7605359a85fbf8c90918d9955"
+            target="_blank">Show
+            Credential</a> </p>
+      </div>
+
+      <div class="work-entry">
+        <h4>SQL Server For Database Administrators</h4>
+        <p class="date">2020</p>
+      </div>
+
+      <div class="work-entry" style="margin-top: -36px;">
+        <h5>Datacamp</h5>
+        <p class="date"><a
+            href="https://www.datacamp.com/statement-of-accomplishment/track/d3e4642e997d2e6eb6ad9d46b0d110c0840e749c"
+            target="_blank">Show
+            Credential</a> </p>
+      </div>
+
+      <div class="work-entry">
+        <h4>Advanced Python</h4>
+        <p class="date">2022</p>
+      </div>
+
+      <div class="work-entry" style="margin-top: -36px;">
+        <h5>Cutshort</h5>
+        <p class="date"><a href="https://cutshort.io/certificate/59279" target="_blank">Show Credential</a> </p>
+      </div>
+
+    </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <!-- Add your contact information, such as email, LinkedIn, and GitHub links. -->
-    <p>Email: g.jain86078@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/gaurav2022/">linkedin.com/in/gaurav2022</a></p>
-    <p>GitHub: <a href="https://github.com/G0rav/">github.com/G0rav</a></p>
+
+    <div class="project">
+
+      <!-- Add your contact information, such as email, LinkedIn, and GitHub links. -->
+      <p>Email: g.jain86078@gmail.com</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/gaurav2022/">linkedin.com/in/gaurav2022</a></p>
+      <p>GitHub: <a href="https://github.com/G0rav/">github.com/G0rav</a></p>
+    </div>
   </section>
+
+  <!-- Resume -->
+  <section id="resume">
+    <h2 style="text-align: center;"><a
+        href="https://drive.google.com/file/d/1roWI3-jXPiCSoRQEcbXgrVyN64ewivJv/view?usp=sharing"
+        target="_blank">Download Resume</a>
+    </h2>
+  </section>
+
+  <button id="back-to-top" title="Back to Top">Back to Top ^</button>
+
 
   <footer>
     <!-- <p>&copy; 2023 Gaurav </p> -->
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var backToTopButton = document.getElementById('back-to-top');
+
+      backToTopButton.addEventListener('click', function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 300) {
+          backToTopButton.style.display = 'block';
+        } else {
+          backToTopButton.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
 </body>
 
 </html>
