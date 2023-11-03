@@ -180,20 +180,22 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I am an experienced ML Engineer with a profound goal to harness the power of AI for the betterment of humanity.
-      My career path involves advancing machine learning and computer vision, spearheading pioneering research, and
-      actively taking on leadership roles.
-    </p>
-    <p>
-      I aim to make a positive societal impact through groundbreaking projects and
-      entrepreneurial ventures. My comprehensive skill set includes machine learning, computer vision, AI, and deep
-      learning, as well as proficiency in Python and data engineering. I excel in problem-solving and innovative
-      solutions, and my research background reflects my commitment to staying at the forefront of technology. </p>
-    <p>My work
-      style is methodical, detail-oriented, and collaborative, with a strong commitment to producing optimized,
-      efficient, and accurate solutions. I am driven by a fervor for leveraging cutting-edge technology to overcome
-      complex challenges, and I excel in leadership and mentorship, supporting the growth and development of those
-      around me.</p>
+    <div class="project">
+      <p>I am an experienced ML Engineer with a profound goal to harness the power of AI for the betterment of humanity.
+        My career path involves advancing machine learning and computer vision, spearheading pioneering research, and
+        actively taking on leadership roles.
+      </p>
+      <p>
+        I aim to make a positive societal impact through groundbreaking projects and
+        entrepreneurial ventures. My comprehensive skill set includes machine learning, computer vision, AI, and deep
+        learning, as well as proficiency in Python and data engineering. I excel in problem-solving and innovative
+        solutions, and my research background reflects my commitment to staying at the forefront of technology. </p>
+      <p>My work
+        style is methodical, detail-oriented, and collaborative, with a strong commitment to producing optimized,
+        efficient, and accurate solutions. I am driven by a fervor for leveraging cutting-edge technology to overcome
+        complex challenges, and I excel in leadership and mentorship, supporting the growth and development of those
+        around me.</p>
+    </div>
   </section>
 
   <!-- Publications Section -->
@@ -359,16 +361,126 @@
     <h2>Projects</h2>
     <!-- List your AI and machine learning projects with descriptions, links, and any other relevant information. -->
     <div class="project">
-      <h3>Project 1: Project Name</h3>
-      <p>Description of the project goes here.</p>
-      <a href="#">View Project</a>
+      <h3>Developed a High-Resolution Face Detection Algorithm (>99% accuracy)</h3>
+      <p>
+
+        Problem Statement:<br>
+        The project involves the development of a face detection machine learning algorithm on high resolution images
+        that achieved an impressive accuracy rate of over 99%. High-resolution images contain a substantial amount of
+        detail, and very tiny face, making it more challenging for a face detection algorithm to accurately identify
+        faces amidst the abundance of visual information.<br><br>
+
+        Solution:<br>
+        To address the challenges of developing a high-resolution face detection algorithm in tensorflow, I undertook a
+        comprehensive approach.<br>
+
+        Dataset Preparation:
+        To prepare the dataset for training, I prepared few python scripts. I first divided each high-resolution image
+        into 16 parts, ensuring overlapping sections to cover every possible face. I then applied an open-source face
+        detection model to these image segments. This process resulted in a well-annotated and diverse dataset, crucial
+        for training a robust model.<br>
+
+        Model Architecture: Afterward, I crafted the model architecture from scratch and embarked on training the model
+        using the dataset. This custom architecture allowed for fine-tuning the algorithm to perform optimally on
+        high-resolution images with tiny faces, a challenging task in itself.<br>
+
+        Inferencing Optimization: I also optimized the inferencing process by dividing the input image into 4 parts,
+        ensuring efficient and accurate detection of faces during application usage.<br>
+
+        The combination of these steps resulted in an exceptional high-resolution face detection algorithm, which not
+        only achieved an accuracy rate of over 99% but also significantly improved the overall speed and accuracy of
+        face detection in real-world scenarios.<br><br>
+
+
+        Impact:<br>
+        This project led to a rapid growth in the company, as we received significantly fewer complaints about face
+        detection. Furthermore, people began recommending the product to others due to the enhanced accuracy and
+        reliability of the face detection algorithm.<br>
+      </p>
+
+      <p> <a href="#">View Project</a></p>
     </div>
+
     <div class="project">
-      <h3>Project 2: Project Name</h3>
-      <p>Description of the project goes here.</p>
-      <a href="#">View Project</a>
+      <h3>Faster yet accurate kiss classification</h3>
+      <p>Problem Statement:<br>
+        Task aimed to classify images into three categories: 'kiss,' 'almost kiss,' and 'no kiss.' The primary challenge
+        faced was the high resolution of the images, with an average resolution of around 6k pixels. This high
+        resolution made it challenging for machine learning models to achieve accurate results, particularly as the kiss
+        event typically occurred in a very small region of the entire image. The initial model had an accuracy of only
+        24%, which was lower than what a random model could provide (33% in this case).<br><br>
+
+        Solution:<br>
+        To address these challenges, I adopted a multi-step approach. Firstly, I leveraged a face detection model's
+        predictions to identify the region of interest within the image. Next, I implemented a smart cropping algorithm
+        to extract and prepare the input for my machine learning model. Subsequently, I trained a Convolutional Neural
+        Network (CNN) on these cropped images.
+
+        One additional challenge I encountered was the class imbalance in the dataset. I had a limited number of kiss
+        images (15k) compared to a much larger number of images for the 'almost kiss' and 'no kiss' classes
+        (approximately 100k each). To mitigate this imbalance, I employed weighted loss functions and down-sampled the
+        dataset.<br><br>
+
+
+        Impact: <br>Approach yielded significant improvements. The model's accuracy increased to approximately 80%,
+        representing a substantial enhancement over the initial 24% accuracy. Additionally, the preprocessing step
+        significantly improved inference speed. As a result, the overall speed of the application increased by 10%,
+        leading to heightened customer satisfaction.<br></p>
+      <p><a href="#">View Project</a></p>
     </div>
-    <!-- Add more project entries as needed -->
+
+    <div class="project">
+      <h3>Image Composition Assessment with YOLO</h3>
+      <p>Problem Statement:<br>
+        The project's primary goal was to assess the composition quality of an image, specifically in terms of adhering
+        to the rule of thirds and accurately identifying the subject's position within the image.<br><br>
+
+        Solution:<br>
+        To address this challenge, I employed the YOLO machine learning model to detect and locate the subjects within
+        the images. YOLO is known for its real-time object detection capabilities, making it suitable for identifying
+        the subjects swiftly and accurately.
+
+        Subsequently, I developed an algorithm that assigned a composition score to each image based on two key factors:
+        the subject's position within the image and adherence to the rule of thirds. This algorithm considered the
+        subject's placement in relation to the rule of thirds grid and evaluated how well the image composition aligned
+        with this fundamental principle of visual design.<br><br>
+
+
+        Impact:<br>
+        The implemented solution demonstrated remarkable performance in assessing image composition. By efficiently
+        detecting subjects and evaluating composition quality, it provided valuable insights for selecting the best
+        images<br></p>
+      <p><a href="#">View Project</a></p>
+    </div>
+
+    <div class="project">
+      <h3>Correct White Balance Prediction in Image</h3>
+      <p>Problem Statement:<br>
+        The project's primary challenge was to correct the white balance of an image by accurately predicting the
+        appropriate temperature and tint values for editing in Adobe Lightroom. Adobe Lightroom offers a wide range of
+        white balance temperature options, from 2000K to 50,000K Kelvin, allowing photographers to adjust them based on
+        their preferences. Predicting the correct values within this extensive range can be a daunting task.<br><br>
+
+        Solution:<br>
+        To address this challenge, I conducted a detailed analysis of the impact of temperature values on images.
+        Through this analysis, I observed that changes in temperature values beyond 9,000K and below 2,400K had minimal
+        impact on the image. Therefore, I focused on developing a regression-based machine learning model within this
+        temperature range.
+
+        The model's objective was to predict the ideal temperature and tint values for white balance correction,
+        simplifying the editing process in Adobe Lightroom. In this case, I employed transfer learning and designed a
+        CNN architecture that not only takes images but also the current Temp and Tint values into account. I then
+        trained the model using the prepared dataset.<br><br>
+
+
+        Impact:<br>
+        The implementation of this machine learning solution had a significant impact on image editing efficiency. By
+        predicting temperature and tint values within a practical range, it streamlined the white balance correction
+        process for photographers, saving them time and improving the overall quality of image editing.<br></p>
+      <p><a href="#">View Project</a></p>
+    </div>
+
+
   </section>
 
 
