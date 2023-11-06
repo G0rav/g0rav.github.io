@@ -26,7 +26,7 @@
       align-items: center;
     }
 
-    img {
+    .profilepic {
       width: 150px;
       /* Adjust the width to your preference */
       height: 150px;
@@ -78,6 +78,31 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
+    .project-details {
+      display: none;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      margin-top: 10px;
+    }
+
+    .project-toggle {
+      color: #007BFF;
+      text-decoration: none;
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .view-more {
+      color: #007BFF;
+      text-decoration: none;
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+
     .work-entry {
       display: flex;
       justify-content: space-between;
@@ -116,6 +141,7 @@
       border-radius: 8px;
       padding: 5px 15px;
       margin: 5px;
+      margin-top: 8px;
       font-size: 0.9rem;
     }
 
@@ -151,7 +177,7 @@
 <body>
   <header>
     <div class="column">
-      <img src="https://avatars.githubusercontent.com/u/62126889?v=4" alt="Gaurav's Picture">
+      <img src="https://avatars.githubusercontent.com/u/62126889?v=4" alt="Gaurav's Picture" class="profilepic">
     </div>
     <div class="text-column">
       <h1>Gaurav Jain</h1>
@@ -181,20 +207,13 @@
   <section id="about">
     <h2>About Me</h2>
     <div class="project">
-      <p>I am an experienced ML Engineer with a profound goal to harness the power of AI for the betterment of humanity.
-        My career path involves advancing machine learning and computer vision, spearheading pioneering research, and
-        actively taking on leadership roles.
-      </p>
-      <p>
-        I aim to make a positive societal impact through groundbreaking projects and
-        entrepreneurial ventures. My comprehensive skill set includes machine learning, computer vision, AI, and deep
-        learning, as well as proficiency in Python and data engineering. I excel in problem-solving and innovative
-        solutions, and my research background reflects my commitment to staying at the forefront of technology. </p>
-      <p>My work
-        style is methodical, detail-oriented, and collaborative, with a strong commitment to producing optimized,
-        efficient, and accurate solutions. I am driven by a fervor for leveraging cutting-edge technology to overcome
-        complex challenges, and I excel in leadership and mentorship, supporting the growth and development of those
-        around me.</p>
+      <p>I'm an experienced Artificial Intelligence Engineer with a proven track record in building AI for startups,
+        leading machine learning teams, and developing innovative AI solutions.
+
+        With a strong commitment to contributing to humanity and mankind, I've also made contributions to the research
+        community with a published paper in the Springer journal. My expertise lies in AI, computer vision, NLP, and
+        data
+        science.
     </div>
   </section>
 
@@ -211,9 +230,47 @@
       </div>
 
       <div class="work-entry" style="margin-top: -6px;">
-        <a href="https://link.springer.com/article/10.1007/s12524-023-01703-2" target="_blank">Journal Link</a>
+        <a href="https://link.springer.com/article/10.1007/s12524-023-01703-2" target="_blank" class="view-more">Journal
+          Link</a>
       </div>
+
+      <div class="project-details">
+        <p><br>
+
+
+          In this research paper, I introduced a convolutional neural network model named Flynet to address the
+          challenge of automatic building detection in high-resolution satellite images. Existing methods often suffer
+          from time-consuming processes and incomplete solutions due to the complexity of visual features and the
+          presence of other objects in the images. Flynet is designed with an encoder-decoder architecture,
+          incorporating improvements that enhance its speed, lightweight nature, and accuracy.<br><br>
+
+          The experimental results demonstrate that it outperforms U-Net, providing <strong>more accurate</strong>
+          predictions while
+          being <strong>three times faster</strong> and <strong>70% smaller in size.</strong> Through this research
+          paper, my aim was not only to
+          contribute to the development of state-of-the-art algorithms for satellite image analysis but also to open new
+          possibilities for real-world applications in remote sensing, urban planning, and disaster management.</p><br>
+
+        <img src="https://raw.githubusercontent.com/G0rav/g0rav.github.io/main/files/paper%20image%20sampe.png">
+        <p style="font-size: 10px;">Illustration of
+          predictions by the models on the validation dataset. Columns starting from left are as follow: raw satellite
+          image, its corresponding
+          ground truths, prediction by proposed model and prediction by U Net model.</p>
+
+      </div>
+      <a class="project-toggle" href="#">View Details</a>
+
+
+      <div style="margin-top: 18px;">
+        <span class="skill-chip">Computer Vision</span>
+        <span class="skill-chip">Image Segmentation</span>
+        <span class="skill-chip">Tensorflow</span>
+        <span class="skill-chip">Remote Sensing</span>
+      </div>
+
     </div>
+
+
 
   </section>
 
@@ -356,217 +413,333 @@
     </div>
   </section>
 
+
   <!-- Projects Section -->
   <section id="projects">
     <h2>Projects</h2>
     <!-- List your AI and machine learning projects with descriptions, links, and any other relevant information. -->
     <div class="project">
       <h3>Developed a High-Resolution Face Detection Algorithm (>99% accuracy)</h3>
-      <p>
 
-        Problem Statement:<br>
-        The project involves the development of a face detection machine learning algorithm on high resolution images
-        that achieved an impressive accuracy rate of over 99%. High-resolution images contain a substantial amount of
-        detail, and very tiny face, making it more challenging for a face detection algorithm to accurately identify
-        faces amidst the abundance of visual information.<br><br>
+      <div class="project-details">
+        <p>
 
-        Solution:<br>
-        To address the challenges of developing a high-resolution face detection algorithm in tensorflow, I undertook a
-        comprehensive approach.<br>
+          <strong>Problem Statement:</strong><br>
+          The project involves the development of a face detection machine learning algorithm on high resolution images
+          that achieved an impressive accuracy rate of over 99%. High-resolution images contain a substantial amount of
+          detail, and very tiny face, making it more challenging for a face detection algorithm to accurately identify
+          faces amidst the abundance of visual information.<br><br>
 
-        Dataset Preparation:
-        To prepare the dataset for training, I prepared few python scripts. I first divided each high-resolution image
-        into 16 parts, ensuring overlapping sections to cover every possible face. I then applied an open-source face
-        detection model to these image segments. This process resulted in a well-annotated and diverse dataset, crucial
-        for training a robust model.<br>
+          <strong>Solution:</strong><br>
+          To address the challenges of developing a high-resolution face detection algorithm in tensorflow, I undertook
+          a
+          comprehensive approach.<br>
 
-        Model Architecture: Afterward, I crafted the model architecture from scratch and embarked on training the model
-        using the dataset. This custom architecture allowed for fine-tuning the algorithm to perform optimally on
-        high-resolution images with tiny faces, a challenging task in itself.<br>
+          Dataset Preparation:
+          To prepare the dataset for training, I prepared few python scripts. I first divided each high-resolution image
+          into 16 parts, ensuring overlapping sections to cover every possible face. I then applied an open-source face
+          detection model to these image segments. This process resulted in a well-annotated and diverse dataset,
+          crucial
+          for training a robust model.<br>
 
-        Inferencing Optimization: I also optimized the inferencing process by dividing the input image into 4 parts,
-        ensuring efficient and accurate detection of faces during application usage.<br>
+          Model Architecture: Afterward, I crafted the model architecture from scratch and embarked on training the
+          model
+          using the dataset. This custom architecture allowed for fine-tuning the algorithm to perform optimally on
+          high-resolution images with tiny faces, a challenging task in itself.<br>
 
-        The combination of these steps resulted in an exceptional high-resolution face detection algorithm, which not
-        only achieved an accuracy rate of over 99% but also significantly improved the overall speed and accuracy of
-        face detection in real-world scenarios.<br><br>
+          Inferencing Optimization: I also optimized the inferencing process by dividing the input image into 4 parts,
+          ensuring efficient and accurate detection of faces during application usage.<br>
+
+          The combination of these steps resulted in an exceptional high-resolution face detection algorithm, which not
+          only achieved an accuracy rate of over 99% but also significantly improved the overall speed and accuracy of
+          face detection in real-world scenarios.<br><br>
 
 
-        Impact:<br>
-        This project led to a rapid growth in the company, as we received significantly fewer complaints about face
-        detection. Furthermore, people began recommending the product to others due to the enhanced accuracy and
-        reliability of the face detection algorithm.<br>
-      </p>
+          <strong>Impact:</strong><br>
+          This project led to a rapid growth in the company, as we received significantly fewer complaints about face
+          detection. Furthermore, people began recommending the product to others due to the enhanced accuracy and
+          reliability of the face detection algorithm.<br>
+        </p>
+      </div>
+      <a class="project-toggle" href="#">View Details</a>
 
-      <!-- <p> <a href="#">View Project</a></p> -->
+
+      <div style="margin-top: 18px;">
+        <span class="skill-chip">Computer Vision</span>
+        <span class="skill-chip">Object Detection</span>
+        <span class="skill-chip">Tensorflow</span>
+        <span class="skill-chip">Onnx</span>
+        <span class="skill-chip">AWS Sagemaker</span>
+      </div>
+
     </div>
 
     <div class="project">
       <h3>Faster yet accurate kiss classification</h3>
-      <p>Problem Statement:<br>
-        Task aimed to classify images into three categories: 'kiss,' 'almost kiss,' and 'no kiss.' The primary challenge
-        faced was the high resolution of the images, with an average resolution of around 6k pixels. This high
-        resolution made it challenging for machine learning models to achieve accurate results, particularly as the kiss
-        event typically occurred in a very small region of the entire image. The initial model had an accuracy of only
-        24%, which was lower than what a random model could provide (33% in this case).<br><br>
 
-        Solution:<br>
-        To address these challenges, I adopted a multi-step approach. Firstly, I leveraged a face detection model's
-        predictions to identify the region of interest within the image. Next, I implemented a smart cropping algorithm
-        to extract and prepare the input for my machine learning model. Subsequently, I trained a Convolutional Neural
-        Network (CNN) on these cropped images.
+      <div class="project-details">
+        <p><strong>Problem Statement:</strong><br>
+          Task aimed to classify images into three categories: 'kiss,' 'almost kiss,' and 'no kiss.' The primary
+          challenge
+          faced was the high resolution of the images, with an average resolution of around 6k pixels. This high
+          resolution made it challenging for machine learning models to achieve accurate results, particularly as the
+          kiss
+          event typically occurred in a very small region of the entire image. The initial model had an accuracy of only
+          24%, which was lower than what a random model could provide (33% in this case).<br><br>
 
-        One additional challenge I encountered was the class imbalance in the dataset. I had a limited number of kiss
-        images (15k) compared to a much larger number of images for the 'almost kiss' and 'no kiss' classes
-        (approximately 100k each). To mitigate this imbalance, I employed weighted loss functions and down-sampled the
-        dataset.<br><br>
+          <strong>Solution:</strong><br>
+          To address these challenges, I adopted a multi-step approach. Firstly, I leveraged a face detection model's
+          predictions to identify the region of interest within the image. Next, I implemented a smart cropping
+          algorithm
+          to extract and prepare the input for my machine learning model. Subsequently, I trained a Convolutional Neural
+          Network (CNN) on these cropped images.
+
+          One additional challenge I encountered was the class imbalance in the dataset. I had a limited number of kiss
+          images (15k) compared to a much larger number of images for the 'almost kiss' and 'no kiss' classes
+          (approximately 100k each). To mitigate this imbalance, I employed weighted loss functions and down-sampled the
+          dataset.<br><br>
 
 
-        Impact: <br>Approach yielded significant improvements. The model's accuracy increased to approximately 80%,
-        representing a substantial enhancement over the initial 24% accuracy. Additionally, the preprocessing step
-        significantly improved inference speed. As a result, the overall speed of the application increased by 10%,
-        leading to heightened customer satisfaction.<br></p>
-      <!-- <p><a href="#">View Project</a></p> -->
+          <strong>Impact:</strong> <br>Approach yielded significant improvements. The model's accuracy increased to
+          approximately 80%,
+          representing a substantial enhancement over the initial 24% accuracy. Additionally, the preprocessing step
+          significantly improved inference speed. As a result, the overall speed of the application increased by 10%,
+          leading to heightened customer satisfaction.<br>
+        </p>
+      </div>
+      <a class="project-toggle" href="#">View Details</a>
+
+      <div style="margin-top: 18px;">
+        <span class="skill-chip">Computer Vision</span>
+        <span class="skill-chip">Image Classification</span>
+        <span class="skill-chip">Tensorflow</span>
+        <span class="skill-chip">Feature Engineering</span>
+        <span class="skill-chip">AWS Sagemaker</span>
+      </div>
+
     </div>
 
     <div class="project">
       <h3>Image Composition Assessment with YOLO</h3>
-      <p>Problem Statement:<br>
-        The project's primary goal was to assess the composition quality of an image, specifically in terms of adhering
-        to the rule of thirds and accurately identifying the subject's position within the image.<br><br>
 
-        Solution:<br>
-        To address this challenge, I employed the YOLO machine learning model to detect and locate the subjects within
-        the images. YOLO is known for its real-time object detection capabilities, making it suitable for identifying
-        the subjects swiftly and accurately.
+      <div class="project-details">
+        <p><strong>Problem Statement:</strong><br>
+          The project's primary goal was to assess the composition quality of an image, specifically in terms of
+          adhering
+          to the rule of thirds and accurately identifying the subject's position within the image.<br><br>
 
-        Subsequently, I developed an algorithm that assigned a composition score to each image based on two key factors:
-        the subject's position within the image and adherence to the rule of thirds. This algorithm considered the
-        subject's placement in relation to the rule of thirds grid and evaluated how well the image composition aligned
-        with this fundamental principle of visual design.<br><br>
+          <strong>Solution:</strong><br>
+          To address this challenge, I employed the YOLO machine learning model to detect and locate the subjects within
+          the images. YOLO is known for its real-time object detection capabilities, making it suitable for identifying
+          the subjects swiftly and accurately.
+
+          Subsequently, I developed an algorithm that assigned a composition score to each image based on two key
+          factors:
+          the subject's position within the image and adherence to the rule of thirds. This algorithm considered the
+          subject's placement in relation to the rule of thirds grid and evaluated how well the image composition
+          aligned
+          with this fundamental principle of visual design.<br><br>
 
 
-        Impact:<br>
-        The implemented solution demonstrated remarkable performance in assessing image composition. By efficiently
-        detecting subjects and evaluating composition quality, it provided valuable insights for selecting the best
-        images<br></p>
-      <!-- <p><a href="#">View Project</a></p> -->
+          <strong>Impact:</strong><br>
+          The implemented solution demonstrated remarkable performance in assessing image composition. By efficiently
+          detecting subjects and evaluating composition quality, it provided valuable insights for selecting the best
+          images<br>
+        </p>
+        <!-- <p><a href="#">View Project</a></p> -->
+      </div>
+      <a class="project-toggle" href="#">View Details</a>
+
+      <div style="margin-top: 18px;">
+        <span class="skill-chip">Image Processing</span>
+        <span class="skill-chip">Object Detection</span>
+      </div>
+
     </div>
 
     <div class="project">
       <h3>Correct White Balance Prediction in Image</h3>
-      <p>Problem Statement:<br>
-        The project's primary challenge was to correct the white balance of an image by accurately predicting the
-        appropriate temperature and tint values for editing in Adobe Lightroom. Adobe Lightroom offers a wide range of
-        white balance temperature options, from 2000K to 50,000K Kelvin, allowing photographers to adjust them based on
-        their preferences. Predicting the correct values within this extensive range can be a daunting task.<br><br>
 
-        Solution:<br>
-        To address this challenge, I conducted a detailed analysis of the impact of temperature values on images.
-        Through this analysis, I observed that changes in temperature values beyond 9,000K and below 2,400K had minimal
-        impact on the image. Therefore, I focused on developing a regression-based machine learning model within this
-        temperature range.
+      <div class="project-details">
+        <p><strong>Problem Statement:</strong><br>
+          The project's primary challenge was to correct the white balance of an image by accurately predicting the
+          appropriate temperature and tint values for editing in Adobe Lightroom. Adobe Lightroom offers a wide range of
+          white balance temperature options, from 2000K to 50,000K Kelvin, allowing photographers to adjust them based
+          on
+          their preferences. Predicting the correct values within this extensive range can be a daunting task.<br><br>
 
-        The model's objective was to predict the ideal temperature and tint values for white balance correction,
-        simplifying the editing process in Adobe Lightroom. In this case, I employed transfer learning and designed a
-        CNN architecture that not only takes images but also the current Temp and Tint values into account. I then
-        trained the model using the prepared dataset.<br><br>
+          <strong>Solution:</strong><br>
+          To address this challenge, I conducted a detailed analysis of the impact of temperature values on images.
+          Through this analysis, I observed that changes in temperature values beyond 9,000K and below 2,400K had
+          minimal
+          impact on the image. Therefore, I focused on developing a regression-based machine learning model within this
+          temperature range.
+
+          The model's objective was to predict the ideal temperature and tint values for white balance correction,
+          simplifying the editing process in Adobe Lightroom. In this case, I employed transfer learning and designed a
+          CNN architecture that not only takes images but also the current Temp and Tint values into account. I then
+          trained the model using the prepared dataset.<br><br>
 
 
-        Impact:<br>
-        The implementation of this machine learning solution had a significant impact on image editing efficiency. By
-        predicting temperature and tint values within a practical range, it streamlined the white balance correction
-        process for photographers, saving them time and improving the overall quality of image editing.<br></p>
-      <!-- <p><a href="#">View Project</a></p> -->
+          <strong>Impact:</strong><br>
+          The implementation of this machine learning solution had a significant impact on image editing efficiency. By
+          predicting temperature and tint values within a practical range, it streamlined the white balance correction
+          process for photographers, saving them time and improving the overall quality of image editing.<br>
+        </p>
+        <!-- <p><a href="#">View Project</a></p> -->
+      </div>
+      <a class="project-toggle" href="#">View Details</a>
+
+      <div style="margin-top: 18px;">
+        <span class="skill-chip">Computer Vision</span>
+        <span class="skill-chip">Regression</span>
+        <span class="skill-chip">Tensorflow</span>
+        <span class="skill-chip">Onnx</span>
+      </div>
+
     </div>
 
     <div class="project">
       <h3>Amazon ML Challenge 2021 - Product Categorization</h3>
-      <p>Problem Statement:<br>
-        The challenge was to categorize products into 10,000 different categories based on their product title and the
-        description. The dataset posed a significant challenge due to its vast size, comprising 3 million data
-        points.<br><br>
+      <div class="project-details">
+        <p><strong>Problem Statement:</strong><br>
+          The challenge was to categorize products into 10,000 different categories based on their product title and the
+          description. The dataset posed a significant challenge due to its vast size, comprising 3 million data
+          points.<br><br>
 
-        Solution:<br>
-        Given the immense dataset, my approach began with a thorough data analysis and data cleaning to gain a
-        comprehensive understanding. I identified the primary challenge as data imbalance, with over ~95% of the data
-        points belonging to approximately 2,700 categories, leaving the remaining 5% distributed across roughly 7,300
-        categories.<br>
+          <strong>Solution:</strong><br>
+          Given the immense dataset, my approach began with a thorough data analysis and data cleaning to gain a
+          comprehensive understanding. I identified the primary challenge as data imbalance, with over ~95% of the data
+          points belonging to approximately 2,700 categories, leaving the remaining 5% distributed across roughly 7,300
+          categories.<br>
 
-        To address this challenge, I used a two-fold solution. First, I trained a machine learning model using
-        Tensorflow/Keras on the 95% of the dataset that belonged to the 2,700 classes. I experimented with various
-        Natural Language Processing (NLP) models, starting with simple techniques like Bag of Words, TF-IDF, and
-        Word2Vec, leveraging the Python's NLTK library for data preparation. For the remaining 5% of the dataset,
-        encompassing approximately 7,300 classes, I implemented a straightforward random model that provided random
-        predictions for these categories.<br>
+          To address this challenge, I used a two-fold solution. First, I trained a machine learning model using
+          Tensorflow/Keras on the 95% of the dataset that belonged to the 2,700 classes. I experimented with various
+          Natural Language Processing (NLP) models, starting with simple techniques like Bag of Words, TF-IDF, and
+          Word2Vec, leveraging the Python's NLTK library for data preparation. For the remaining 5% of the dataset,
+          encompassing approximately 7,300 classes, I implemented a straightforward random model that provided random
+          predictions for these categories.<br>
 
-        Attached graph shows the cumulative distribution of the target classes.<br><br>
+          Attached graph shows the cumulative distribution of the target classes.<br><br>
 
 
-        Impact:<br>
-        While I was unable to submit my solution within the deadline, my approach demonstrated remarkable results. Even
-        with the simplicity of using clever data preparation and a basic Bag of Words model, the accuracy achieved was
-        on par with the best solutions at the time that utilized advanced models like BERT. This project underscored my
-        ability to handle complex, large-scale datasets and devise effective strategies to tackle data imbalance issues,
-        leading to competitive results in a challenging machine learning competition.<br></p>
-      <p><a href="https://github.com/G0rav/Amazon_ML_Challenge_2021">View Project</a></p>
+          <strong>Impact:</strong><br>
+          While I was unable to submit my solution within the deadline, my approach demonstrated remarkable results.
+          Even
+          with the simplicity of using clever data preparation and a basic Bag of Words model, the accuracy achieved was
+          on par with the best solutions at the time that utilized advanced models like BERT. This project underscored
+          my
+          ability to handle complex, large-scale datasets and devise effective strategies to tackle data imbalance
+          issues,
+          leading to competitive results in a challenging machine learning competition.<br><br>
+        </p>
+        <p><a href="https://github.com/G0rav/Amazon_ML_Challenge_2021" target="_blank">View Project</a></p>
+      </div>
+      <a class="project-toggle" href="#">View Details</a>
+
+      <div style="margin-top: 18px;">
+        <span class="skill-chip">Natural Language Processing (NLP)</span>
+        <span class="skill-chip">Tensorflow</span>
+        <span class="skill-chip">NLTK</span>
+        <span class="skill-chip">Feature Engineering</span>
+        <span class="skill-chip">Statistics</span>
+      </div>
     </div>
 
     <div class="project">
       <h3>Deployed a Machine Learning Model for Ticket Build Time Prediction</h3>
-      <p>Problem Statement:<br>
-        The problem statement was to create a machine learning model meant to predict ticket build times accurately. The
-        objective was to enhance developer efficiency by providing a more precise estimate of the time required to build
-        the software after submitting a commit.<br><br>
 
-        Solution:<br>
-        To achieve this, the initial challenge was to create a dataset because there wasn't a readily available one. I
-        talked to developers from different departments to figure out if the number of files affected build time and
-        which changes took more or less time. Afterward, I conducted data analysis and feature engineering using Python
-        libraries like pandas and matplotlib to prepare the necessary features. I trained several regression machine
-        learning models and found that the decision tree performed the best. The great thing about it was that it not
-        only predicted the build time but also provided information about the importance of each feature.<br><br>
+      <div class="project-details">
+        <p><strong>Problem Statement:</strong><br>
+          The problem statement was to create a machine learning model meant to predict ticket build times accurately.
+          The
+          objective was to enhance developer efficiency by providing a more precise estimate of the time required to
+          build
+          the software after submitting a commit.<br><br>
+
+          <strong>Solution:</strong><br>
+          To achieve this, the initial challenge was to create a dataset because there wasn't a readily available one. I
+          talked to developers from different departments to figure out if the number of files affected build time and
+          which changes took more or less time. Afterward, I conducted data analysis and feature engineering using
+          Python
+          libraries like pandas and matplotlib to prepare the necessary features. I trained several regression machine
+          learning models and found that the decision tree performed the best. The great thing about it was that it not
+          only predicted the build time but also provided information about the importance of each feature.<br><br>
 
 
-        Impact:<br>
-        The deployment of the machine learning model delivered significant benefits. Developers now had access to
-        precise predictions for ticket build times, leading to increased efficiency and better project management. This
-        project showcased my ability to leverage machine learning to optimize processes and enhance productivity within
-        the development team, ultimately contributing to more effective software development practices.<br></p>
-      <!-- <p><a href="#">View Project</a></p> -->
+          <strong>Impact:</strong><br>
+          The deployment of the machine learning model delivered significant benefits. Developers now had access to
+          precise predictions for ticket build times, leading to increased efficiency and better project management.
+          This
+          project showcased my ability to leverage machine learning to optimize processes and enhance productivity
+          within
+          the development team, ultimately contributing to more effective software development practices.<br>
+        </p>
+        <!-- <p><a href="#">View Project</a></p> -->
+      </div>
+      <a class="project-toggle" href="#">View Details</a>
+
+      <div style="margin-top: 18px;">
+        <span class="skill-chip">Scikit-learn</span>
+        <span class="skill-chip">Statistics</span>
+        <span class="skill-chip">Exploratory Data Analysis</span>
+        <span class="skill-chip">Feature Engineering</span>
+      </div>
+
     </div>
 
     <div class="project">
       <h3>Web Application for Automatic Background Removal in Images</h3>
-      <p>Problem Statement:<br>
-        The challenge at hand was to create a machine learning model capable of automatically removing backgrounds from
-        images. It involves distinguishing the main subject from the background, which can be complex and vary
-        significantly across different images.<br><br>
 
-        Solution:<br>
-        To tackle this problem, I leveraged a diverse dataset of images containing various subjects and backgrounds. The
-        objective was to develop an efficient model that could accurately identify and isolate the main subject from the
-        background.<br>
+      <div class="project-details">
+        <p><strong>Problem Statement:</strong><br>
+          The challenge at hand was to create a machine learning model capable of automatically removing backgrounds
+          from
+          images. It involves distinguishing the main subject from the background, which can be complex and vary
+          significantly across different images.<br><br>
 
-        Initially, I explored the use of existing deep learning models, such as Mask R-CNN and U-Net, known for their
-        segmentation capabilities. However, these models often came with computational overhead and larger model
-        sizes.<br>
+          <strong>Solution:</strong><br>
+          To tackle this problem, I leveraged a diverse dataset of images containing various subjects and backgrounds.
+          The
+          objective was to develop an efficient model that could accurately identify and isolate the main subject from
+          the
+          background.<br>
 
-        To optimize for speed and model size, I devised a custom CNN-based architecture, drawing inspiration from U-Net
-        but tailoring it to the specific task of background removal. The challenge lay in achieving real-time or
-        near-real-time processing while preserving accuracy.<br><br>
+          Initially, I explored the use of existing deep learning models, such as Mask R-CNN and U-Net, known for their
+          segmentation capabilities. However, these models often came with computational overhead and larger model
+          sizes.<br>
 
-        Web Application Development:<br>
-        In addition to the model development, I also created a user-friendly web application using Flask. This web app
-        allowed users to upload their images and receive instant background removal results. It provided a seamless and
-        intuitive interface for individuals and businesses to utilize this powerful image editing capability without the
-        need for extensive technical expertise.<br><br>
+          To optimize for speed and model size, I devised a custom CNN-based architecture, drawing inspiration from
+          U-Net
+          but tailoring it to the specific task of background removal. The challenge lay in achieving real-time or
+          near-real-time processing while preserving accuracy.<br><br>
 
-        Impact:<br>
-        The result of this project was a highly efficient model for automatic background removal in images, coupled with
-        a user-friendly web application. It offered real-time or near-real-time performance while effectively removing
-        complex backgrounds.<br></p>
-      <p><a href="https://github.com/G0rav/Automatic_Background_Removal">View Project</a></p>
+          Web Application Development:<br>
+          In addition to the model development, I also created a user-friendly web application using Flask. This web app
+          allowed users to upload their images and receive instant background removal results. It provided a seamless
+          and
+          intuitive interface for individuals and businesses to utilize this powerful image editing capability without
+          the
+          need for extensive technical expertise.<br><br>
+
+          <strong>Impact:</strong><br>
+          The result of this project was a highly efficient model for automatic background removal in images, coupled
+          with
+          a user-friendly web application. It offered real-time or near-real-time performance while effectively removing
+          complex backgrounds.<br><br>
+        </p>
+        <p><a href="https://github.com/G0rav/Automatic_Background_Removal" target="_blank">View Project</a></p>
+      </div>
+      <a class="project-toggle" href="#">View Details</a>
+
+      <div style="margin-top: 18px;">
+        <span class="skill-chip">Computer Vision</span>
+        <span class="skill-chip">Image Segmentation</span>
+        <span class="skill-chip">Tensorflow</span>
+        <span class="skill-chip">Flask</span>
+        <span class="skill-chip">HTML, CSS</span>
+      </div>
+
     </div>
 
 
@@ -642,7 +815,7 @@
         <h5>Coursera</h5>
         <p class="date"><a
             href="https://www.coursera.org/account/accomplishments/verify/9HRBEAEE8SLW?utm_campaign=copybutton_certificate&utm_medium=certificate&utm_source=link"
-            target="_blank">Show
+            target="_blank" class="view-more">Show
             Credential</a> </p>
       </div>
 
@@ -655,7 +828,7 @@
         <h5>Datacamp</h5>
         <p class="date"><a
             href="https://www.datacamp.com/statement-of-accomplishment/track/1d5e50768e76b410843b8a1cc41ab7aa6e8b2caa"
-            target="_blank">Show
+            target="_blank" class="view-more">Show
             Credential</a> </p>
       </div>
 
@@ -669,7 +842,7 @@
         <h5>Datacamp</h5>
         <p class="date"><a
             href="https://www.datacamp.com/statement-of-accomplishment/track/4cf2ee95f34d52e7605359a85fbf8c90918d9955"
-            target="_blank">Show
+            target="_blank" class="view-more">Show
             Credential</a> </p>
       </div>
 
@@ -682,7 +855,7 @@
         <h5>Datacamp</h5>
         <p class="date"><a
             href="https://www.datacamp.com/statement-of-accomplishment/track/d3e4642e997d2e6eb6ad9d46b0d110c0840e749c"
-            target="_blank">Show
+            target="_blank" class="view-more">Show
             Credential</a> </p>
       </div>
 
@@ -693,7 +866,8 @@
 
       <div class="work-entry" style="margin-top: -36px;">
         <h5>Cutshort</h5>
-        <p class="date"><a href="https://cutshort.io/certificate/59279" target="_blank">Show Credential</a> </p>
+        <p class="date"><a href="https://cutshort.io/certificate/59279" target="_blank" class="view-more">Show
+            Credential</a> </p>
       </div>
 
     </div>
@@ -705,9 +879,11 @@
     <div class="project">
 
       <!-- Add your contact information, such as email, LinkedIn, and GitHub links. -->
-      <p>Email: g.jain86078@gmail.com</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/gaurav2022/">linkedin.com/in/gaurav2022</a></p>
-      <p>GitHub: <a href="https://github.com/G0rav/">github.com/G0rav</a></p>
+      <p><strong>Email:</strong> g.jain86078@gmail.com</p>
+      <p style="margin-top: 8px;"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/gaurav2022/"
+          target="_blank">linkedin.com/in/gaurav2022</a></p>
+      <p style="margin-top: 8px;"><strong>GitHub:</strong> <a href="https://github.com/G0rav/"
+          target="_blank">github.com/G0rav</a></p>
     </div>
   </section>
 
@@ -727,6 +903,7 @@
   </footer>
 
   <script>
+    // back to top button 
     document.addEventListener('DOMContentLoaded', function () {
       var backToTopButton = document.getElementById('back-to-top');
 
@@ -745,6 +922,27 @@
         }
       });
     });
+
+
+    // accordian 
+    document.addEventListener('DOMContentLoaded', function () {
+      var projectToggles = document.querySelectorAll('.project-toggle');
+
+      projectToggles.forEach(function (toggle) {
+        toggle.addEventListener('click', function (event) {
+          var details = this.parentElement.querySelector('.project-details');
+          if (details.style.display === 'none' || details.style.display === '') {
+            details.style.display = 'block';
+            this.innerText = 'Hide Details';
+          } else {
+            details.style.display = 'none';
+            this.innerText = 'View Details';
+          }
+          event.preventDefault();
+        });
+      });
+    });
+
   </script>
 
 </body>
